@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Bricolage Grotesque', 'Be Vietnam Pro', sans-serif;
+    
+    /* Cute Pastel Palette */
+    --bg-app: #FFF7F8;
+    --bg-card: #FFFFFF;
+    --bg-card-subtle: #FDF2F8;
+    --border-color: #FCE7F3;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+    
+    --primary-pastel: #EC4899;
+    --primary-light: #FCE7F3;
+    --secondary-pastel: #8B5CF6;
+    --secondary-light: #EDE9FE;
+    --accent-gold: #F59E0B;
+    --accent-emerald: #10B981;
+  }
+
+  .dark {
+    --bg-app: #181424;
+    --bg-card: #231C35;
+    --bg-card-subtle: #2D2444;
+    --border-color: #3B3058;
+    --text-primary: #FDF2F8;
+    --text-secondary: #D1D5DB;
+    --text-muted: #9CA3AF;
+
+    --primary-pastel: #F472B6;
+    --primary-light: #3D2240;
+    --secondary-pastel: #A78BFA;
+    --secondary-light: #302652;
+    --accent-gold: #FBBF24;
+    --accent-emerald: #34D399;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.balance-hidden {
+  filter: blur(7px);
+  user-select: none;
+  transition: filter 0.2s ease;
+}
+
+/* Glassmorphism effects */
+.pastel-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .pastel-glass {
+  background: rgba(35, 28, 53, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hide scrollbar for clean chip row */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 80px);
+}

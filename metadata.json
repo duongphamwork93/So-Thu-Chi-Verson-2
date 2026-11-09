@@ -1,0 +1,6 @@
+{
+  "name": "Sổ Thu Chi AI - Quản Lý Tài Chính",
+  "description": "Ứng dụng sổ thu chi cá nhân phong cách pastel dễ thương tích hợp AI đọc hoá đơn, sao kê, quản lý tài khoản ngân hàng và đầu tư.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
